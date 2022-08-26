@@ -3,7 +3,7 @@ import json
 import os.path
 from werkzeug.utils import secure_filename
 
-app = Flask(__name__)
+application = app = Flask(__name__)
 app.secret_key = 'h432hi5ohi3h5i5hi3o2hi'
 
 @app.route('/')
@@ -58,3 +58,6 @@ def page_not_found(error):
 @app.route('/api')
 def session_api():
     return jsonify(list(session.keys()))
+
+def greet(person):
+  return f"Hi {person}"
