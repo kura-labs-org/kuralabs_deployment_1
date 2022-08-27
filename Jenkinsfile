@@ -1,7 +1,7 @@
 pipeline {
   agent any
    stages {
-    stage('Build') {
+    stage ('Build') {
       steps {
         sh '''
         python3 -m venv test3
@@ -13,7 +13,7 @@ pipeline {
         deactivate
         ''' 
       }
-    stage('test') {
+    stage ('test') {
       steps {
         sh '''
         python3 -m venv test3
