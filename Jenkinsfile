@@ -14,7 +14,7 @@ pipeline {
     stage ('test') {
       steps {
         sh '''#!/bin/bash
-        pytest --verbose --junit-xml test-reports/results.xml
+        py.test --verbose --junit-xml test-reports/results.xml
         ''' 
       }
     
