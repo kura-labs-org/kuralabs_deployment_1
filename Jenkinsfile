@@ -3,7 +3,7 @@ pipeline {
    stages {
     stage('Build') {
       steps {
-        sh ''' #!/bin/bash
+        sh '''
         python3 -m venv test3
         source test3/bin/activate
         pip install pip --upgrade
@@ -15,7 +15,7 @@ pipeline {
       }
     stage('test') {
       steps {
-        sh ''' #!/bin/bash 
+        sh '''
         python3 -m venv test3
         source test4/bin/activate
         pip install pip --upgrade
