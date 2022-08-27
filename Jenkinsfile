@@ -24,6 +24,7 @@ pipeline {
         deactivate
         ''' 
       }
+   
       post{
         always {
           junit 'test-reports/results.xml'
@@ -31,6 +32,5 @@ pipeline {
        
       }
     }
-   }
   }
-
+ }
