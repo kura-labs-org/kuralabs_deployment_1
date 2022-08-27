@@ -13,7 +13,6 @@ pipeline {
         deactivate
         ''' 
       }
-   stages {
     stage('test') {
       steps {
         sh ''' #!/bin/bash 
@@ -35,4 +34,3 @@ pipeline {
    }
   }
  }
-}
