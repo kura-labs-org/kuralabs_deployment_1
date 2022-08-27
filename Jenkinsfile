@@ -11,7 +11,8 @@ pipeline {
         export FLASK_APP=application
         flask run &
         deactivate
-     }   ''' 
+        '''
+     }
    }
     stage ('test') {
       steps {
