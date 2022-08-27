@@ -8,14 +8,13 @@ pipeline {
         source test3/bin/activate
         pip install pip --upgrade
         pip install -r requirements.txt
-        pwd
         '''
      }
    }
     stage ('test') {
       steps {
         sh '''#!/bin/bash
-        pwd
+        source test3/bin/activate
         py.test --verbose --junit-xml test-reports/results.xml
         ''' 
       }
