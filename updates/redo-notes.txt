@@ -3,10 +3,15 @@
 sudo apt update && sudo apt install default-jre -y
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo gpg --dearmor -o /usr/share/keyrings/jenkins.gpg
 sudo sh -c 'echo deb [signed-by=/usr/share/keyrings/jenkins.gpg] http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
-sudo apt update && sudo apt install jenkins -y
+sudo apt update && sudo apt install jenkins python3-pip python3.10-venv -y
 sudo systemctl start jenkins
 
-
---- Initial Jenkins Admin Setup ---
-> Navigate to http://{IP-ADDRESS}:8080
+--- Initial Jenkins Admin Setup on http://{IP-ADDRESS}:8080 ---
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+--- What is AWS Elastic Beanstalk? ---
+Use Elastic Beanstalk to deploy applications quickly without infrastructure management.
+  - "With Elastic Beanstalk, you can quickly deploy and manage applicatons in the AWS Cloud without having to learn about the infrastructure that runs those applications. Elastic Beanstalk reduces management complexity without restricting choice or control. You simply upload your application, and Elastic Beanstalk automatically handles the details of capacity provisioning, load balancing, scaling, and application health monitoring."
+    https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html
+  - Step by Step Guide: https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/GettingStarted.html
+  - Creating Source Code Bundle: https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/applications-sourcebundle.html
